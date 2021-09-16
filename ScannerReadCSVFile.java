@@ -57,8 +57,11 @@ public class ScannerReadCSVFile
         try {
             ScannerReadCSVFile srCsv = new ScannerReadCSVFile();
             srCsv.run();
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             System.out.println("File not found");
+        } catch (Exception e) {
+            System.out.println("There's an error someplace. Try using the debugger to find it!");
+
         }
     }
 }
